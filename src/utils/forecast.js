@@ -9,6 +9,8 @@ const forecast = ( latitude, longitude, cb ) => {
         else cb( undefined, {
             summary: body.daily.data[0].summary,
             temperature: body.currently.temperature,
+            tempLow: body.daily.data[0].temperatureLow,
+            tempHigh: body.daily.data[0].temperatureHigh,
             precipProbability: body.currently.precipProbability
         } )
     } )
