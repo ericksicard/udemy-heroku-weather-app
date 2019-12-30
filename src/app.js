@@ -6,7 +6,8 @@ const forecast = require('./utils/forecast');
 
 // creating the express application
 const app = express();
-// setup for heroku and local server
+
+// setup for HEROKU and local server
 const port = process.env.PORT || 3000 ; 
 
 // Define paths for Express config (Absolute path of the folders being served)
@@ -33,7 +34,7 @@ app.get('', ( req, res ) => {
 
 app.get('/about', ( req, res ) => {
     res.render('about', {
-        title: 'About me',
+        title: 'About',
         aboutText: 'Ask whatever you wanna know about us',
         name: 'Erick Sicard'
     });
